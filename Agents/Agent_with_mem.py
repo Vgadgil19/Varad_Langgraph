@@ -16,7 +16,7 @@ def process(state : Chatbot)->Chatbot:
     response = llm.invoke(state["messages"])
     state["messages"].append(AIMessage(content=response.content))
     print(f"\n AI : {response.content}")
-    print(state["messages"])
+    # print(state["messages"])
     return state
 
 graph = StateGraph(Chatbot)
